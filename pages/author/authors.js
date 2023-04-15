@@ -4,7 +4,7 @@ import { useAuth } from '../../utils/context/authContext';
 import { getAuthors } from '../../api/authorData';
 
 function ListAuthors() {
-  const [authors, setAuthors] = useState([{}]);
+  const [authors, setAuthors] = useState([]);
 
   // TODO: Get user ID using useAuth Hook
   const { user } = useAuth();
@@ -20,11 +20,11 @@ function ListAuthors() {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
-    <>
+    <div className="flex-wrap">
       {authors.map((author) => (
         <AuthorCard key={author.firebaseKey} authorObj={author} onUpdate={getAllAuthors} />
       ))}
-    </>
+    </div>
   );
 }
 

@@ -15,7 +15,7 @@ function AuthorCard({ authorObj, onUpdate }) {
   };
 
   return (
-    <Card style={{ width: '18rem', margin: '10px' }}>
+    <Card style={{ width: '18rem', margin: '10px', display: 'flex' }}>
       {/* <Card.Img variant="top" src={authorObj.image} alt={authorObj.title} style={{ height: '400px' }} /> */}
       <Card.Body>
         <Card.Title>{authorObj.first_name} {authorObj.last_name}</Card.Title>
@@ -37,13 +37,13 @@ function AuthorCard({ authorObj, onUpdate }) {
 }
 
 AuthorCard.propTypes = {
-  authorObj: PropTypes.arrayOf(PropTypes.shape({
+  authorObj: PropTypes.shape({
     email: PropTypes.string,
     first_name: PropTypes.string,
     favorite: PropTypes.bool,
     last_name: PropTypes.string,
     firebaseKey: PropTypes.string,
-  })).isRequired,
+  }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
 
