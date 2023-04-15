@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import { Button } from 'react-bootstrap';
 import { useAuth } from '../utils/context/authContext';
 import { signOut } from '../utils/auth';
 
@@ -17,7 +18,7 @@ export default function User() {
       <h1>{user.displayName}</h1>
       <p>{user.email}</p>
       <p>{user.metadata.lastSignInTime}</p>
-      <button type="button">{signOut}</button>
+      <Button type="button" onClick={signOut}>Sign Out</Button>
     </div>
   );
 }
