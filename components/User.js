@@ -5,7 +5,6 @@ import { signOut } from '../utils/auth';
 
 export default function User() {
   const { user } = useAuth();
-  console.warn(user)
 
   return (
     <div className="text-light text-center">

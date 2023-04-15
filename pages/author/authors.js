@@ -17,6 +17,7 @@ function ListAuthors() {
   // TODO: make the call to the API to get all the books on component render
   useEffect(() => {
     getAllAuthors();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>

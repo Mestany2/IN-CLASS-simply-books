@@ -1,5 +1,6 @@
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { viewAuthorDetails } from '../../api/mergedData';
 
 // inside component use
@@ -15,7 +16,7 @@ export default function ViewAuthor() {
   return (
     <div className="mt-5 d-flex flex-wrap">
       <div className="d-flex flex-column">
-        <img src={authorBooks.image} alt={authorBooks.title} style={{ width: '300px' }} />
+        <Image src={authorBooks.image} alt={authorBooks.title} style={{ width: '300px' }} />
       </div>
       <div className="text-white ms-5 details">
         <h5>

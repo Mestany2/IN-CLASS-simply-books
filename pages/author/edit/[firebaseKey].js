@@ -1,5 +1,5 @@
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 
-// inside component use
-const router = useRouter();
-const { firebaseKey } = router.query;
+// // // inside component use
+// // const router = useRouter();
+// // const { firebaseKey } = router.query;
