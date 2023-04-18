@@ -30,6 +30,7 @@ function BookForm({ obj }) {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
+    console.warn(e.target);
     setFormInput((prevState) => ({
       ...prevState,
       [name]: value,

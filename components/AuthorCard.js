@@ -16,7 +16,6 @@ function AuthorCard({ authorObj, onUpdate }) {
 
   return (
     <Card style={{ width: '18rem', margin: '10px', display: 'flex' }}>
-      {/* <Card.Img variant="top" src={authorObj.image} alt={authorObj.title} style={{ height: '400px' }} /> */}
       <Card.Body>
         <Card.Title>{authorObj.first_name} {authorObj.last_name}</Card.Title>
         <p className="card-text bold">{authorObj.favorite && <span>Favorite<br /></span> } {authorObj.favorite}</p>

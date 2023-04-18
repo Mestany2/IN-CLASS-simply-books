@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 import AuthorCard from '../../components/AuthorCard';
 import { useAuth } from '../../utils/context/authContext';
 import { getAuthors } from '../../api/authorData';
+import Link from 'next/link';
 
 function ListAuthors() {
   const [authors, setAuthors] = useState([]);
@@ -21,6 +23,9 @@ function ListAuthors() {
   }, []);
   return (
     <div className="flex-wrap">
+      <Link href="/author/new" passHref>
+        <Button>Add An Author</Button>
+      </Link>
       {authors.map((author) => (
         <AuthorCard key={author.firebaseKey} authorObj={author} onUpdate={getAllAuthors} />
       ))}
