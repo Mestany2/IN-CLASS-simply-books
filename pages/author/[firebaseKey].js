@@ -5,7 +5,7 @@ import BookCard from '../../components/BookCard';
 
 // inside component use
 export default function ViewAuthor() {
-  const [authorBooks, setAuthorBooks] = useState([{}]);
+  const [authorBooks, setAuthorBooks] = useState([]);
   const router = useRouter();
   const { firebaseKey } = router.query;
 
